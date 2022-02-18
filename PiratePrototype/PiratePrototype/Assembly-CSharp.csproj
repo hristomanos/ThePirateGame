@@ -53,9 +53,19 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\FireCannon.cs" />
+    <Compile Include="Assets\Scripts\CannonBall.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\CannonBall.cs" />
-    <Compile Include="Assets\FireCannon.cs" />
+    <Compile Include="Assets\Scripts\AI.cs" />
+    <Compile Include="Assets\Beach.cs" />
+    <Compile Include="Assets\Castle.cs" />
+    <Compile Include="Assets\EnemyShip.cs" />
+    <Compile Include="Assets\PickUp.cs" />
+    <Compile Include="Assets\GameManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &509433038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509433039}
+  m_Layer: 0
+  m_Name: SpawnPointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &509433039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509433038}
+  m_LocalRotation: {x: 0, y: 0, z: -0.42261827, w: 0.9063079}
+  m_LocalPosition: {x: -0.306, y: -0.187, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8420320067618686145}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}
 --- !u!1 &2096027917
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096027918}
   m_Layer: 0
-  m_Name: ShootingPoint
+  m_Name: SpawnPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,9 +104,10 @@ GameObject:
   - component: {fileID: 8420320067618686144}
   - component: {fileID: 8420320067618686150}
   - component: {fileID: 1902300915371214060}
+  - component: {fileID: 929895020}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +126,7 @@ Transform:
   - {fileID: 8420320067279927191}
   - {fileID: 8420320069035283300}
   - {fileID: 2096027918}
+  - {fileID: 509433039}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -228,9 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39909de6aa6105147940461e7a28e83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Speed: 1.2
-  m_Torque: 50
   m_Motor: {fileID: 8420320067279927191}
+  m_Speed: 1.2
   m_SteerPower: 1
 --- !u!114 &1902300915371214060
 MonoBehaviour:
@@ -244,8 +275,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a304bc5462e4f244ba2c973c167b9d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CannonBallPrefab: {fileID: 0}
-  m_SpawningPoint: {fileID: 0}
+  m_CannonBallPrefab: {fileID: 1867596676794217203, guid: 3467c23aceb7e464bb9f94a13a84579e, type: 3}
+  m_SpawningPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &929895020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8420320067618686147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753f523d96d8c184e8dc7ab04ca2b59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DamagedSprites:
+  - {fileID: 21300000, guid: 801c2f8ab349e3d44ab10612f452169c, type: 3}
+  - {fileID: 21300000, guid: 35033b5222e591a4a8594e9e2bb63ed5, type: 3}
+  - {fileID: 21300000, guid: 28688202e891a4349b382f8ed72a7e24, type: 3}
+  - {fileID: 21300000, guid: af148ae4d493b53488b3321722ac63cb, type: 3}
+  m_Health: 100
 --- !u!1 &8420320069035283301
 GameObject:
   m_ObjectHideFlags: 0
