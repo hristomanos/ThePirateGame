@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Speed: 2
-  m_TimeAlive: 5
+  m_TimeAlive: 10
   m_Damage: 10
   m_Shooter: Player
   m_Receiver: Enemy
