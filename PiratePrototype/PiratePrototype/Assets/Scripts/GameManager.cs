@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI m_HealthText;
     [SerializeField] TextMeshProUGUI m_CannonballText;
+    [SerializeField] TextMeshProUGUI m_ScoreText;
+    [SerializeField] Image m_SpeedBuffImage;
+    int m_Score;
 
-    [SerializeField] 
     bool g_CanShoot = true;
 
     public bool GetCanShoot() { return g_CanShoot; }
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         m_NumberOfCannonBalls = 60;
+        m_Score = 0;
     }
 
     public void AddCannonballs(int numberToAdd)
@@ -90,6 +93,26 @@ public class GameManager : MonoBehaviour
     public void UpdateHealthText(string text)
     {
         m_HealthText.text = "Health: " + text;
+    }
+
+    public void AddScore(int value)
+    {
+        m_Score += value;
+        UpdateScoreUI();
+    }
+
+    public void UpdateScoreUI()
+    {
+        m_ScoreText.text = "Score: " + m_Score.ToString();
+    }
+
+    public void UpdateSpeedBuffUI(float timer, float duration)
+    {
+        //Enable Image
+        m_SpeedBuffImage.gameObject.SetActive(true);
+        //Convert lerp time to 0-1       
+        m_SpeedBuffImage.fillAmount = Mathf.InverseLerp(0, duration, timer);
+
     }
 
 }

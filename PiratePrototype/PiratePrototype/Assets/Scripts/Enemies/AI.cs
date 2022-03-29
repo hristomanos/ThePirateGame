@@ -7,7 +7,7 @@ public class AI : MonoBehaviour
     [SerializeField] protected int p_HP;
     [SerializeField] protected GameObject p_CannonBallPrefab;
     [SerializeField] protected List<Transform> p_SpawningPoints;
-
+    [SerializeField] protected int p_ScoreValue;
 
     // Update is called once per frame
     void Update()

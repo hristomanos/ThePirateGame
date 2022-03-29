@@ -11,6 +11,8 @@ public class Castle : AI
     [Header("Cannon")]
     [SerializeField] float m_ShootSeconds;
 
+
+
     void Start()
     {
         StartCoroutine(Counter());
@@ -24,6 +26,8 @@ public class Castle : AI
         {
             p_HP = 0;
             m_Renderer.sprite = m_PirateFlag;
+            GameManager.Instance.AddScore(p_ScoreValue);
+            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
         }
     }
 

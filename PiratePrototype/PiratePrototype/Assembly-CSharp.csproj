@@ -54,16 +54,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\HealthManager.cs" />
+    <Compile Include="Assets\SpeedBuff.cs" />
     <Compile Include="Assets\Scripts\PickUps\HealthPickUp.cs" />
     <Compile Include="Assets\Scripts\Player\FireCannon.cs" />
     <Compile Include="Assets\Scripts\Projectile\CannonBall.cs" />
     <Compile Include="Assets\Scripts\Enemies\AI.cs" />
     <Compile Include="Assets\Scripts\Beach.cs" />
+    <Compile Include="Assets\PowerUpEffect.cs" />
     <Compile Include="Assets\Scripts\PickUps\AmmoPickUp.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyShip.cs" />
     <Compile Include="Assets\Scripts\Enemies\Castle.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\PowerUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -311,6 +314,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.19f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -755,6 +761,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{C8F5FABC-6F6B-F052-EE85-FB1913D1ABAA}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{CE8C7052-8111-7D17-036A-B55F73F1E1FC}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{D12BC571-6A9F-DA4E-B37E-02502959370B}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

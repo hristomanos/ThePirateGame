@@ -18,7 +18,7 @@ public class EnemyShip : AI
     // Update is called once per frame
     void Update()
     {
-        transform.right = m_Player.position - transform.position;
+       // transform.right = m_Player.position - transform.position;
     }
 
     public override void TakeDamage(int damage)
@@ -30,6 +30,7 @@ public class EnemyShip : AI
             p_HP = 0;
             GameManager.Instance.InstantiateCannonball(transform.position);
             GameManager.Instance.InstantiateHealthPickUp(transform.position);
+            GameManager.Instance.AddScore(p_ScoreValue);
             Destroy(gameObject);
         }
     }

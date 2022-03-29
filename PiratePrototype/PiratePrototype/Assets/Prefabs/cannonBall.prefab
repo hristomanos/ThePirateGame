@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867596676334110291}
   - component: {fileID: 1867596676334110290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TrailRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1867596676794217215}
   - component: {fileID: 1867596676794217214}
   - component: {fileID: 1867596676794217212}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cannonBall
   m_TagString: CannonBall
   m_Icon: {fileID: 0}
