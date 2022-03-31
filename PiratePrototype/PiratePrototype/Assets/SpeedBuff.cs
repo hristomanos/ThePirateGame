@@ -6,8 +6,6 @@ using UnityEngine;
 public class SpeedBuff : PowerUpEffect
 {
     public float amount;
-    public float buffTimer;
-    public float buffTime;
     public override void Apply(GameObject target)
     {
         //Trigger timer

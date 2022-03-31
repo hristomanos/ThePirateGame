@@ -18,7 +18,10 @@ public class EnemyShip : AI
     // Update is called once per frame
     void Update()
     {
-       // transform.right = m_Player.position - transform.position;
+        if (gameObject.layer == 8)
+        {
+            transform.right = m_Player.position - transform.position;
+        }
     }
 
     public override void TakeDamage(int damage)

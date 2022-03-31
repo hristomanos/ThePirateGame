@@ -43,7 +43,7 @@ public class Castle : AI
     {
         while (p_HP > 0)
         {
-            yield return new WaitForSeconds(m_ShootSeconds);
+            yield return new WaitForSeconds(Random.Range(m_ShootSeconds, m_ShootSeconds + 3));
             FireCannon();
         }
     }

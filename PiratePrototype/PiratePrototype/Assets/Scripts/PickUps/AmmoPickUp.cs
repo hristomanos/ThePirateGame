@@ -10,7 +10,7 @@ public class AmmoPickUp : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //Add 10-15 cannon balls
-            GameManager.Instance.AddCannonballs(Random.Range(30, 60));
+            GameManager.Instance.AddCannonballs(Random.Range(50, 100));
             Destroy(gameObject);
         }
     }

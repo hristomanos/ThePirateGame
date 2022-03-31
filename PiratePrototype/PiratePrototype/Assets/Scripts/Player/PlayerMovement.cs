@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         timer -= Time.deltaTime;
         //UpdateUI
         GameManager.Instance.UpdateSpeedBuffUI(timer,duration);
-        Debug.Log(timer);
+        
         if (timer <= 0)
         {
             m_Speed = m_InitialSpeed;

@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_HealthText;
     [SerializeField] TextMeshProUGUI m_CannonballText;
     [SerializeField] TextMeshProUGUI m_ScoreText;
+    [SerializeField] TextMeshProUGUI m_QuestText;
+    [SerializeField] float m_FadeOutInSeconds;
     [SerializeField] Image m_SpeedBuffImage;
     int m_Score;
 
@@ -37,8 +39,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_NumberOfCannonBalls = 60;
+        m_NumberOfCannonBalls = 80;
         m_Score = 0;
+    }
+
+    private void Update()
+    {
+        FadeOutQuestText();
     }
 
     public void AddCannonballs(int numberToAdd)
@@ -115,4 +122,14 @@ public class GameManager : MonoBehaviour
 
     }
 
+    void FadeOutQuestText()
+    {
+        StartCoroutine(Delay(5f));
+    }
+
+    IEnumerator Delay(float numberOfSeconds)
+    {
+        yield return new WaitForSeconds(numberOfSeconds);
+        m_QuestText.CrossFadeAlpha(0.0f, m_FadeOutInSeconds, false);
+    }
 }
