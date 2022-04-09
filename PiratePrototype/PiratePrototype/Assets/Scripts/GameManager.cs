@@ -78,7 +78,6 @@ public class GameManager : MonoBehaviour
         //}
 
         float offsetY = 1f;
-        //Vector2 offset = position + new Vector2(position.x, offsetY);
         Vector2 offset = new Vector2(position.x, position.y + offsetY);
         Instantiate(m_HealthPickUpPrefab, offset, Quaternion.identity);
 
